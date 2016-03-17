@@ -1,0 +1,17 @@
+{
+  "name": "just",
+  "version": "1.0.0",
+  "description": "Just testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dbconnect.js"
+  },
+  "author": "Alibh Deori",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mysql": "^2.10.2",
+    "node-mysql": "^0.4.2"
+  }
+}
