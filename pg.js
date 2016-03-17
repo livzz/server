@@ -51,6 +51,7 @@ app.get('/show',function(req,res)
 		seq.sync().then( function()
 			{
 				res.send(test.findAll());
+				console.log(test);
 			});
 	});
 // initializing a port
