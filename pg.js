@@ -15,22 +15,23 @@ var seq = new Sequelize("postgres://wmjhesbhficdss:8h-sUiXhXMXy4qn0ts8ZPrBfGt@ec
 //       console.log('Connection has been established successfully.');
 //     }
 // });
-// app.get("/",function(req,res)
-// {
-// 	res.send("Hello");
-// });
+app.get("/",function(req,res)
+{
+	seq.sync().then( function()
+	{
+		console.log("Yoyo its working!!");
+		var test = seq.define('tests',{
+		user: Sequelize.STRING,
+		pass: Sequelize.INTEGER
+		});
+		res.send("Hello");
+	});
+});
 
 app.get("/create",function(req,res){
 
 seq.sync({force:true}).then( function()
 {
-	console.log("Yoyo its working!!");
-
-
-	var test = seq.define('test',{
-		user: Sequelize.STRING,
-		pass: Sequelize.INTEGER
-	});
 
 	test.create(
 		{	
