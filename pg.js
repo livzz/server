@@ -20,7 +20,7 @@ app.get("/",function(req,res)
 	seq.sync().then( function()
 	{
 		console.log("Yoyo its working!!");
-		var test = seq.define('tests',{
+		var test = seq.define('test',{
 		user: Sequelize.STRING,
 		pass: Sequelize.INTEGER
 		});
