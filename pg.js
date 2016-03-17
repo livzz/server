@@ -15,12 +15,13 @@ var seq = new Sequelize("postgres://wmjhesbhficdss:8h-sUiXhXMXy4qn0ts8ZPrBfGt@ec
 //       console.log('Connection has been established successfully.');
 //     }
 // });
+var test;
 app.get("/",function(req,res)
 {
 	seq.sync().then( function()
 	{
 		console.log("Yoyo its working!!");
-		var test = seq.define('test',{
+		test = seq.define('test',{
 		user: Sequelize.STRING,
 		pass: Sequelize.INTEGER
 		});
