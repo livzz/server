@@ -42,6 +42,7 @@ app.get("/create",function(req,res){
 	      return console.error('error running query', err);
 	    }
 	    console.log(result);
+	    res.send(result)
 	    //output: 1
   		});
 	});
