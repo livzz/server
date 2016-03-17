@@ -45,5 +45,13 @@ seq.sync().then( function()
 		});
 	});
 });
+
+app.get('/show',function(req,res)
+	{
+		seq.sync().then( function()
+			{
+				res.send(test.findAll());
+			});
+	});
 // initializing a port
 app.listen(port);
