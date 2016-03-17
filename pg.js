@@ -31,7 +31,7 @@ app.get("/",function(req,res)
 
 app.get("/create",function(req,res){
 
-seq.sync({force:true}).then( function()
+seq.sync().then( function()
 {
 
 	test.create(
